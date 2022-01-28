@@ -13,8 +13,4 @@
     <PackageReference Include="geometry3Sharp" Version="1.0.324" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="SolidModelDesignAggregate\SolidModelFeatures\" />
-  </ItemGroup>
-
 </Project>
