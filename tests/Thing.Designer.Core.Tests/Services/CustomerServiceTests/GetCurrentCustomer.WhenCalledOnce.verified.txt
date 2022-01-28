@@ -1,0 +1,18 @@
+﻿{
+  ApplicationUserId: Guid_1,
+  doesCustomerExistBeforeCall: false,
+  responseFirstCall: {
+    Value: {
+      CustomerId: Guid_2
+    },
+    ValueType: GetCurrentCustomerResponse,
+    Status: Ok,
+    IsSuccess: true,
+    SuccessMessage: ,
+    Errors: []
+  },
+  customerEntity: {
+    ApplicationUserId: Guid_1,
+    Id: Guid_2
+  }
+}

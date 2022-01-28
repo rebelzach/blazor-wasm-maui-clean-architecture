@@ -1,0 +1,9 @@
+﻿{
+  customerCount: 0,
+  expectedException: {
+    $type: NullReferenceException,
+    Type: NullReferenceException,
+    Message: ApplicationUserId,
+    HelpLink: null
+  }
+}

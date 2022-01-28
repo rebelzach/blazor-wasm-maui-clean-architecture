@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ts\solidModelMeshView.js" />
+    <Content Include="ts\solidModelMeshView.js.map" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.1" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.5.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Thing.Designer.Core.Contracts\Thing.Designer.Core.Contracts.csproj" />
+    <ProjectReference Include="..\Thing.Designer.SolidModeling\Thing.Designer.SolidModeling.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\three.js\LICENSE.md" />
+    <None Include="wwwroot\js\three.js\stats.module.js" />
+    <None Include="wwwroot\js\three.js\STLLoader.js" />
+    <None Include="wwwroot\js\three.js\three.js" />
+    <None Include="wwwroot\js\three.js\three.min.js" />
+    <None Include="wwwroot\js\three.js\three.module.js" />
+    <None Include="wwwroot\js\three.js\WebGL.js" />
+  </ItemGroup>
+
+</Project>

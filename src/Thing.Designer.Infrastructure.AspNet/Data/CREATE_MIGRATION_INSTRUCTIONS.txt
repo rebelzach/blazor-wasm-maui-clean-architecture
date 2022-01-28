@@ -1,0 +1,2 @@
+﻿-- RUN THIS from infrastructure project
+dotnet ef migrations add AddCustomer -s ..\src\ThingBuilder.Api\ -o Data/Migrations

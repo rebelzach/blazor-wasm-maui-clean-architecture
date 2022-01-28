@@ -1,0 +1,25 @@
+﻿{
+  Markup:
+<button id="AddDesignButton" class="btn btn-primary" blazor:onclick="1" b-szop1eu7ki="">Create Design</button>
+<table b-szop1eu7ki="">
+  <thead b-szop1eu7ki="">
+    <tr b-szop1eu7ki="">
+      <td b-szop1eu7ki="">Name</td>
+    </tr>
+  </thead>
+  <tbody b-szop1eu7ki=""></tbody>
+</table>,
+  ComponentInfo: {
+    instance: {},
+    renderCount: 2,
+    nodeCount: 6,
+    markupLength: 286
+  },
+  TestState: {
+    navigationHistory: [
+      {
+        Uri: design/new
+      }
+    ]
+  }
+}

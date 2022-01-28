@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="AutoMapper" Version="10.1.1" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.1" />
+	  <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.1" />
+	  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+	  <PackageReference Include="Verify.Xunit" Version="14.13.1" />
+	  <PackageReference Include="xunit" Version="2.4.1" />
+	  <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		  <PrivateAssets>all</PrivateAssets>
+	  </PackageReference>
+	  <PackageReference Include="coverlet.collector" Version="3.1.0">
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		  <PrivateAssets>all</PrivateAssets>
+	  </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Thing.Designer.Core\Thing.Designer.Core.csproj" />
+    <ProjectReference Include="..\..\src\Thing.Designer.Infrastructure.AspNet\Thing.Designer.Infrastructure.AspNet.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Services\CustomerDesignServiceTests\ListDesigns.AddWithGoodData.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>ListDesigns.cs</DependentUpon>
+    </None>
+    <None Update="Services\CustomerServiceTests\GetCurrentCustomer.WhenNoUserAvailable.verified.txt">
+      <DependentUpon>GetCurrentCustomer.cs</DependentUpon>
+    </None>
+    <None Update="Services\CustomerServiceTests\GetCurrentCustomer.WhenCalledTwice.verified.txt">
+      <DependentUpon>GetCurrentCustomer.cs</DependentUpon>
+    </None>
+    <None Update="Services\CustomerServiceTests\GetCurrentCustomer.WhenCalledOnce.verified.txt">
+      <DependentUpon>GetCurrentCustomer.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+
+</Project>

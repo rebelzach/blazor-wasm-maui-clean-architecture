@@ -1,0 +1,16 @@
+﻿{
+  Value: {
+    CustomerDesigns: [
+      {
+        DesignId: Guid_1,
+        DesignName: null
+      },
+      {
+        DesignId: Guid_2,
+        DesignName: null
+      }
+    ]
+  },
+  Status: Ok,
+  Errors: []
+}

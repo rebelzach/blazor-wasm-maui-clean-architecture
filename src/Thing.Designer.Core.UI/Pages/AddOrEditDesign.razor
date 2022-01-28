@@ -1,0 +1,20 @@
+﻿@page "/design/new"
+@page "/design/{designId}"
+
+<h3>Create Design</h3>
+
+<input type="text" @bind="@_customerDesign.DesignName" @bind:event="oninput" />
+<div>
+    <br />@_customerDesign.DesignName
+</div>
+
+<SolidModelMeshView />
+
+@code {
+    CustomerDesignDto _customerDesign = new CustomerDesignDto();
+
+    [SupplyParameterFromQuery] 
+    [Parameter]
+    public Guid? DesignId { get; set; }
+}
+

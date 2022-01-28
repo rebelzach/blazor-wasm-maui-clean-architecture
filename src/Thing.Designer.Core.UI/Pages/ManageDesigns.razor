@@ -1,0 +1,48 @@
+﻿@page "/designs"
+
+@attribute [Authorize]
+
+@inject ICustomerDesignService CustomerDesignService;
+@inject NavigationManager Navigation;
+
+<PageTitle>Your Designs</PageTitle>
+
+<button id="AddDesignButton" class="btn btn-primary" @onclick="CreateDesign">Create Design</button>
+
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var design in _customerDesigns)
+        {
+            <tr>
+                <td>@design.DesignName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<CustomerDesignDto> _customerDesigns = new ();
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var result = await CustomerDesignService.ListDesignsAsync(new ListCustomerDesignsRequest());
+            if (result.IsSuccess())
+            {
+                _customerDesigns = result.Value!.CustomerDesigns;
+                StateHasChanged();
+            }
+        }
+    }
+
+    private void CreateDesign()
+    {
+        Navigation.NavigateTo("design/new");
+    }
+}

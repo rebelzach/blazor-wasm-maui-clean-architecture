@@ -1,0 +1,56 @@
+﻿@using Thing.Designer.SolidModeling
+@using Thing.Designer.SolidModeling.Models
+
+@implements IAsyncDisposable;
+@inject IJSRuntime JSRuntime;
+
+<input type="range" min="10" max="100" value="@_solidModel.Width" @oninput=@(e => DimensionChange(v => _solidModel.Width = v, e)) />
+<input type="range" min="10" max="100" value="@_solidModel.Height" @oninput=@(e => DimensionChange(v => _solidModel.Height = v, e)) />
+<input type="range" min="10" max="100" value="@_solidModel.Depth" @oninput=@(e => DimensionChange(v => _solidModel.Depth = v, e)) />
+<div style="width: 400px; height: 400px;" @ref="@_container"></div>
+
+@code {
+    private IJSObjectReference? _jsModule;
+    private IJSObjectReference? _jsMeshViewInstance;
+    private ElementReference _container;
+    private SolidModelDesigner _modelDesigner = new SolidModelDesigner();
+    private SolidModelDesignDto _solidModel = new SolidModelDesignDto()
+        {
+            Width = 100,
+            Height = 100,
+            Depth = 100,
+            Features = new List<IFeatureDto>
+            {
+                //new HoleFeatureDto()
+            }
+        };
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            _jsModule = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/Thing.Designer.Core.UI/js/solidModelMeshView.js");
+            _jsMeshViewInstance = await _jsModule.InvokeAsync<IJSObjectReference>("solidModelMeshView", _container);
+
+            _modelDesigner.ModelMeshUpdated +=
+                async (s, m) => await _jsMeshViewInstance.InvokeVoidAsync("loadAsciiText", m.AsciiStlMeshData);
+
+            _modelDesigner.RecalculateSolidModel(_solidModel);
+        }
+    }
+
+    public void DimensionChange(Action<int> setAction, ChangeEventArgs changeEvent)
+    {
+        if (int.TryParse(changeEvent.Value?.ToString(), out int value))
+        {
+            setAction(value);
+            Console.WriteLine("updating");
+            _modelDesigner.RecalculateSolidModel(_solidModel);
+        }
+    }
+
+    public ValueTask DisposeAsync()
+    {
+        return _jsModule?.DisposeAsync() ?? ValueTask.CompletedTask;
+    }
+}

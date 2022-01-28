@@ -1,0 +1,109 @@
+﻿{
+  Markup:
+<button id="AddDesignButton" class="btn btn-primary" blazor:onclick="1" b-szop1eu7ki="">Create Design</button>
+<table b-szop1eu7ki="">
+  <thead b-szop1eu7ki="">
+    <tr b-szop1eu7ki="">
+      <td b-szop1eu7ki="">Name</td>
+    </tr>
+  </thead>
+  <tbody b-szop1eu7ki="">
+    <tr b-szop1eu7ki="">
+      <td b-szop1eu7ki="">Design 1</td>
+    </tr>
+    <tr b-szop1eu7ki="">
+      <td b-szop1eu7ki="">Design 2</td>
+    </tr>
+    <tr b-szop1eu7ki="">
+      <td b-szop1eu7ki="">Design 3</td>
+    </tr>
+    <tr b-szop1eu7ki="">
+      <td b-szop1eu7ki="">Design 4</td>
+    </tr>
+    <tr b-szop1eu7ki="">
+      <td b-szop1eu7ki="">Design 5</td>
+    </tr>
+    <tr b-szop1eu7ki="">
+      <td b-szop1eu7ki="">Design 6</td>
+    </tr>
+    <tr b-szop1eu7ki="">
+      <td b-szop1eu7ki="">Design 7</td>
+    </tr>
+    <tr b-szop1eu7ki="">
+      <td b-szop1eu7ki="">Design 8</td>
+    </tr>
+    <tr b-szop1eu7ki="">
+      <td b-szop1eu7ki="">Design 9</td>
+    </tr>
+  </tbody>
+</table>,
+  ComponentInfo: {
+    instance: {},
+    renderCount: 1,
+    nodeCount: 24,
+    markupLength: 964
+  },
+  TestState: {
+    designServiceMock: {
+      MockedType: ICustomerDesignService,
+      Invocations: [
+        {
+          Method: ListDesignsAsync,
+          Arguments: {
+            request: {
+              CorrelationId: Guid_1
+            },
+            cancellationToken: {
+              WaitHandle: {
+                SafeWaitHandle: {}
+              }
+            }
+          },
+          Returned: {
+            Value: {
+              CustomerDesigns: [
+                {
+                  DesignId: Guid_2,
+                  DesignName: Design 1
+                },
+                {
+                  DesignId: Guid_3,
+                  DesignName: Design 2
+                },
+                {
+                  DesignId: Guid_4,
+                  DesignName: Design 3
+                },
+                {
+                  DesignId: Guid_5,
+                  DesignName: Design 4
+                },
+                {
+                  DesignId: Guid_6,
+                  DesignName: Design 5
+                },
+                {
+                  DesignId: Guid_7,
+                  DesignName: Design 6
+                },
+                {
+                  DesignId: Guid_8,
+                  DesignName: Design 7
+                },
+                {
+                  DesignId: Guid_9,
+                  DesignName: Design 8
+                },
+                {
+                  DesignId: Guid_10,
+                  DesignName: Design 9
+                }
+              ]
+            },
+            Errors: []
+          }
+        }
+      ]
+    }
+  }
+}

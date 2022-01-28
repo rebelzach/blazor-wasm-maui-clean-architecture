@@ -1,0 +1,16 @@
+﻿{
+  designId: Guid_1,
+  response: {
+    Value: {
+      Id: Guid_1
+    },
+    Status: Ok,
+    Errors: []
+  },
+  customerId: Guid_2,
+  designEntity: {
+    CustomerId: Guid_2,
+    DesignName: null,
+    Id: Guid_1
+  }
+}

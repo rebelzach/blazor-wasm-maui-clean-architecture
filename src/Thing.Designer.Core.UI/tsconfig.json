@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "ES2021",
+    "rootDirs": [ "ts", "wwwroot/js" ],
+    "outDir": "wwwroot/js"
+  },
+  "include": [
+    "ts/**/*"
+  ]
+}

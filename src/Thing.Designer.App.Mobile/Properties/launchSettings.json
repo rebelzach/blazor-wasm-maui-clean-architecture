@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "Windows Machine": {
+      "commandName": "MsixPackage",
+      "nativeDebugging": false
+    },
+    "dotnet": {
+      "commandName": "MsixPackage",
+      "nativeDebugging": false,
+      "hotReloadEnabled": true
+    }
+  }
+}
