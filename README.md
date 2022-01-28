@@ -4,13 +4,14 @@
 
 This example application is intented to allow a theoretical customer to create a 3D model, a "Thing", that they might wish to order as a 3D printed item.
 
-### Loose goals for this project:
+### Introduction:
 
-- Have some fun with Blazor and MAUI!
-- Explore isolating domain components for use in WebAssembly Blazor, specifically the `Thing.Domain.SolidModeling` project. 
-- Minimize the API glue necessary to make backend calls using common contract interfaces and GRPC-Web
-- Experiment with verification/snapshot testing.
-- Experiment with implementing a simple DDD paradigm along with an application façade layer.
+- Loose goals for this project
+    - Have some fun with Blazor and MAUI!
+    - Explore isolating domain components for use in WebAssembly Blazor, specifically the `Thing.Domain.SolidModeling` project. 
+    - Minimize the API glue necessary to make backend calls using common contract interfaces and GRPC-Web
+    - Experiment with verification/snapshot testing.
+    - Experiment with implementing a simple DDD paradigm along with an application faÃ§ade layer.
 
 - Based on the clean architecture template from Steve Smith
     - https://github.com/ardalis/CleanArchitecture
