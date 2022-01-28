@@ -14,13 +14,12 @@ This example application is intented to allow a theoretical customer to create a
     - Minimize the API glue necessary to make backend calls using common contract interfaces and GRPC-Web
     - Experiment with verification/snapshot testing.
     - Experiment with implementing a simple DDD paradigm along with an application façade layer.
-
 - Based on the clean architecture template from Steve Smith
-    - https://github.com/ardalis/CleanArchitecture
+  - https://github.com/ardalis/CleanArchitecture
 - Also invaluable, the Blaze Orbital example from from Steve Sanderson
-    - https://github.com/SteveSandersonMS/BlazeOrbital
+  - https://github.com/SteveSandersonMS/BlazeOrbital
 - Uses Verify and BUnit for rapid implementation of tests.
-    - https://github.com/VerifyTests/Verify.Blazor
+  - https://github.com/VerifyTests/Verify.Blazor
 
 ### Quick Start
 
