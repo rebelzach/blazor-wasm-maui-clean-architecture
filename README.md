@@ -1,5 +1,7 @@
 # Blazor WebAssembly and MAUI Clean Architecture Example
 
+![Screenshot of the create design page with a 3D block and some controls to alter its name and size.](https://user-images.githubusercontent.com/330253/151625994-5f316f2d-84a8-437a-9645-c0e220985705.png)
+    
 *This is an INCOMPLETE work-in-progress experiment.*
 
 This example application is intented to allow a theoretical customer to create a 3D model, a "Thing", that they might wish to order as a 3D printed item.
